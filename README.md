@@ -13,3 +13,13 @@ for withdraw we need Abi and contract address for call any contract.
 after we compile we have the abi to interact with.
 
 ### what is Aave
+
+the way Aave works is they actually have a contract, witch will point us to
+the correct contract.
+
+### lending pool contract
+
+the contract that we're going to doing all the lending with is lending pool contract.
+
+and we need a contract that get lending pool contract address.
+the contract is LendingPoolContractAddressProvider.
