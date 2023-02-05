@@ -1,7 +1,9 @@
+const { getNamedAccounts } = require("hardhat")
 const { getWeth } = require("./getWeth")
 
 async function main() {
     await getWeth()
+    const { deployer } = await getNamedAccounts()
 }
 
 main()

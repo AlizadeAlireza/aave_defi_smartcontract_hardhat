@@ -12,10 +12,9 @@ async function getWeth() {
         deployer
     )
     const tx = await iWeth.deposit({ value: AMOUNT })
-    await tx.wait(1)
+    await tx.wait(1) // wait for one block
     const wethBalance = await iWeth.balanceOf(deployer)
     console.log(`Got ${wethBalance.toString()} WETH`)
-    console.log("this is good functino")
 }
 
 module.exports = { getWeth, AMOUNT }

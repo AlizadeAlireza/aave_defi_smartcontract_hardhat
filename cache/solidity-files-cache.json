@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/aliza/Documents/vs/tokens/hardhat-defi/contracts/interfaces/IWeth.sol": {
-      "lastModificationDate": 1669298170155,
-      "contentHash": "9518b83e12fed731734d7e79d549344b",
+      "lastModificationDate": 1675596531923,
+      "contentHash": "291898786e89231ffb45e0f23468f2b1",
       "sourceName": "contracts/interfaces/IWeth.sol",
       "solcConfig": {
         "version": "0.4.19",
