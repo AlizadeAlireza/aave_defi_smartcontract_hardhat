@@ -23,3 +23,8 @@ the contract that we're going to doing all the lending with is lending pool cont
 
 and we need a contract that get lending pool contract address.
 the contract is LendingPoolContractAddressProvider.
+
+for getting the contract address we create a function and try to get the address.
+we need the address and Abi.
+we have the address and we want to get Abi.
+also we need to declare the contract compiler version in hardhat.config.js
