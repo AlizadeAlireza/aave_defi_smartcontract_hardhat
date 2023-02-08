@@ -16,6 +16,8 @@ async function getLendingPool(account) {
         "0x5E52dEc931FFb32f609681B8438A51c675cc232d",
         account
     )
+
+    const lendingPoolAddress = await lendingPoolAddressProvider.getLendingPool()
 }
 
 main()

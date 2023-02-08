@@ -36,3 +36,5 @@ we have a function that is getLendingPool that returns the address of lendingPoo
 ### ILendingPool
 
 we have lending pool adderss and for lending pool contract we must get the contract Interface.
+
+we must set @aave/protocolV2 and change the imports.
