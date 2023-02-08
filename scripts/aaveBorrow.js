@@ -9,6 +9,7 @@ async function main() {
     // Lending Pool Address Provider: 0x5E52dEc931FFb32f609681B8438A51c675cc232d
     // lending Pool : going to get from the Lending Pool Address Provider
     const lendingPool = await getLendingPool(deployer)
+
     console.log(`LendingPool address ${lendingPool.address}`)
 }
 
@@ -16,7 +17,7 @@ async function getLendingPool(account) {
     // create the lending pool address contract
     const lendingPoolAddressProvider = await ethers.getContractAt(
         "ILendingPoolAddressesProvider",
-        "0x5E52dEc931FFb32f609681B8438A51c675cc232d",
+        "0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5",
         account
     )
 

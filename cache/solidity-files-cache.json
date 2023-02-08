@@ -43,48 +43,6 @@
         "IWeth"
       ]
     },
-    "/home/aliza/Documents/vs/tokens/hardhat-defi/contracts/interfaces/ILendingPoolAddressesProvider.sol": {
-      "lastModificationDate": 1675599917623,
-      "contentHash": "a2aa97dd079073449c93d4c35030cbd4",
-      "sourceName": "contracts/interfaces/ILendingPoolAddressesProvider.sol",
-      "solcConfig": {
-        "version": "0.6.12",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "0.6.12"
-      ],
-      "artifacts": [
-        "ILendingPoolAddressesProvider"
-      ]
-    },
     "/home/aliza/Documents/vs/tokens/hardhat-defi/contracts/interfaces/ILendingPool.sol": {
       "lastModificationDate": 1675841256519,
       "contentHash": "61851e03cb2edd0c32430481bc1ec8da",
