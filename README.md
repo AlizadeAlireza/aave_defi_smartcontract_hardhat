@@ -17,7 +17,9 @@ after we compile we have the abi to interact with.
 the way Aave works is they actually have a contract, witch will point us to
 the correct contract.
 
-### lending pool contract
+## lending pool contract
+
+### ILendingPoolAddressesProvider
 
 the contract that we're going to doing all the lending with is lending pool contract.
 
@@ -28,3 +30,9 @@ for getting the contract address we create a function and try to get the address
 we need the address and Abi.
 we have the address and we want to get Abi.
 also we need to declare the contract compiler version in hardhat.config.js
+
+we have a function that is getLendingPool that returns the address of lendingPool.
+
+### ILendingPool
+
+we have lending pool adderss and for lending pool contract we must get the contract Interface.
