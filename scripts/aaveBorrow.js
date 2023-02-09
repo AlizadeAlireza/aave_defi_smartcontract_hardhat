@@ -11,6 +11,8 @@ async function main() {
     const lendingPool = await getLendingPool(deployer)
 
     console.log(`LendingPool address ${lendingPool.address}`)
+
+    // deposite
 }
 
 async function getLendingPool(account) {

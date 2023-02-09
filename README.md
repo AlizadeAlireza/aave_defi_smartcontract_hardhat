@@ -38,3 +38,8 @@ we have a function that is getLendingPool that returns the address of lendingPoo
 we have lending pool adderss and for lending pool contract we must get the contract Interface.
 
 we must set @aave/protocolV2 and change the imports.
+
+after that we get the pool address that is `0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9`
+we want to deposite.
+
+### deposite
