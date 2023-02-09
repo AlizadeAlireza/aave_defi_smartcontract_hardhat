@@ -90,3 +90,6 @@ let's say like that:
 
 for this we use the priceFeeds.
 in this interface we need to lastRoundData for getting the latest price of DAI.
+
+after getting the DAI price with aggregator interface we want to know how much DAI we can borrow.
+for this action we need convert it to DAI.

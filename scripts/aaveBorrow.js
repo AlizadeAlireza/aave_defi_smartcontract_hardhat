@@ -30,6 +30,10 @@ async function main() {
     const amountDaiToBorrow =
         availableBorrowsETH.toString() * 0.95 * (1 / daiPrice.toNumber())
     console.log(`You can borrow ${amountDaiToBorrow} DAI`)
+    // we need this unit for our work
+    const amountDaiToBorrowWei = ethers.utils.parseEther(
+        amountDaiToBorrow.toString()
+    )
     // Borrow
     // how much we have borrow, how much we have in collateral, how much we can borrow!!
 }
