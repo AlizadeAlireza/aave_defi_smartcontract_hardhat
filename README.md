@@ -78,3 +78,5 @@ each token has some different value like:
     - loan to value: if we deposit 1 ETH we can borrow just 75% of our collateral DAI.
     - Liquidation threshold: if we deposit 1 ETH and borrow more than 80% we got liquidated.
     and etc.
+
+after that we create async function to get user data we can return that information just we need.
