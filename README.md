@@ -65,3 +65,16 @@ function deposit(address asset, uint256 amount, address onBehalfOf, uint16 refer
 we pass this function our weth address, amount of our token, deployer address and always zero to referralCode.
 
 ### borrowing from aave
+
+for borrow we want to know how much we can borrow.
+how much we have borrow, how much we have in collateral, how much we can borrow!!
+
+for this we can use the function that be getUserAccountData() that Returns the user account data across all the reserves.
+
+if our collateral is 1 ETH, don't mean we can borrow 1 ETH amount of assets.
+
+each token has some different value like:
+
+    - loan to value: if we deposit 1 ETH we can borrow just 75% of our collateral DAI.
+    - Liquidation threshold: if we deposit 1 ETH and borrow more than 80% we got liquidated.
+    and etc.

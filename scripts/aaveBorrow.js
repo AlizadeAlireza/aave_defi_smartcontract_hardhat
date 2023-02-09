@@ -22,6 +22,7 @@ async function main() {
     console.log("Deposited!")
 
     // Borrow
+    // how much we have borrow, how much we have in collateral, how much we can borrow!!
 }
 
 async function getLendingPool(account) {
