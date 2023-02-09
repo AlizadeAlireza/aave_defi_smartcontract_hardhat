@@ -43,3 +43,18 @@ after that we get the pool address that is `0x7d2768dE32b0b80b7a3454c06BdAc94A69
 we want to deposite.
 
 ### deposite
+
+safeTransferFrom() function going to pull the money out of our wallet.
+so we need to approve the aave contract. so wa want the wethTokenAddress.
+
+for approve we need to create approve function.
+
+arguments:
+
+    - contractAddress
+    - spenderAddress = the contract that we're going to give the approval to to spend our token and the amount of it.
+    - amountToSpend = how much to approve it.
+    - account
+
+in this function the spender address is lending pool address because we want to give the lending pool our
+web token.

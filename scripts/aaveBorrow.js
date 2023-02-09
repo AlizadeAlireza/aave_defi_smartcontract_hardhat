@@ -1,5 +1,5 @@
 const { getNamedAccounts } = require("hardhat")
-const { getWeth } = require("./getWeth")
+const { getWeth, AMOUNT } = require("./getWeth")
 
 async function main() {
     await getWeth()
@@ -13,6 +13,13 @@ async function main() {
     console.log(`LendingPool address ${lendingPool.address}`)
 
     // deposite
+    const wethTokenAddress = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    // approve
+    await approveErc20(wethTokenAddress, lendingPool.address, AMOUNT, deployer)
+    console.log("Depositing....")
+    // asset, amount, onBehalfOf, referralcode = always is zero
+    await lendingPool.deposite(wethTokenAddress, AMOUNT, deployer, 0)
+    console.log("Deposited!")
 }
 
 async function getLendingPool(account) {
@@ -32,6 +39,24 @@ async function getLendingPool(account) {
         account
     )
     return lendingPool
+}
+
+async function approveErc20(
+    erc20Address,
+    spenderAddress,
+    amountToSpend,
+    account
+) {
+    // create erc20 contract
+    const erc20Token = await ehters.getContractAt(
+        "IERC20", // abit
+        erc20Address, // contract address
+        account // account address
+    )
+    // approve the contract and wait one block to sure be confirmed
+    const tx = await erc20Token.approve(spenderAddress, amountToSpend)
+    await tx.wait(1)
+    console.log("Approved")
 }
 
 main()
