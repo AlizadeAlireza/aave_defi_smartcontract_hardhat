@@ -63,3 +63,5 @@ for deposit we call the function from contract and pass the arguments to it.
 function deposit(address asset, uint256 amount, address onBehalfOf, uint16 referralCode) external;
 
 we pass this function our weth address, amount of our token, deployer address and always zero to referralCode.
+
+### borrowing from aave

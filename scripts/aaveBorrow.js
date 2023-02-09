@@ -20,6 +20,8 @@ async function main() {
     // asset, amount, onBehalfOf, referralcode = always is zero
     await lendingPool.deposit(wethTokenAddress, AMOUNT, deployer, 0)
     console.log("Deposited!")
+
+    // Borrow
 }
 
 async function getLendingPool(account) {
