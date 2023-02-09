@@ -23,6 +23,10 @@ async function main() {
 
     // Borrow
     // how much we have borrow, how much we have in collateral, how much we can borrow!!
+    let { availableBorrowsETH, totalDebtETH } = await getBorrowUserData(
+        lendingPool,
+        deployer
+    )
 }
 
 async function getLendingPool(account) {
@@ -64,7 +68,7 @@ async function approveErc20(
 
 async function getBorrowUserData(lendingPool, account) {
     const { totalCollateralETH, totalDebtETH, availableBorrowsETH } =
-        await lendingPool.getBorrowUserData(account)
+        await lendingPool.getUserAccountData(account)
     console.log(`You have ${totalCollateralETH} worth of ETH deposited.`)
     console.log(`You have ${totalDebtETH} worth of ETH Borrowed.`)
     console.log(`You can borrow ${availableBorrowsETH} worth of ETH .`)
