@@ -27,6 +27,9 @@ async function main() {
     )
 
     const daiPrice = await getDaiPrice()
+    const amountDaiToBorrow =
+        availableBorrowsETH.toString() * 0.95 * (1 / daiPrice.toNumber())
+    console.log(`You can borrow ${amountDaiToBorrow} DAI`)
     // Borrow
     // how much we have borrow, how much we have in collateral, how much we can borrow!!
 }
