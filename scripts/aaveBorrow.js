@@ -12,13 +12,13 @@ async function main() {
 
     console.log(`LendingPool address ${lendingPool.address}`)
 
-    // deposite
+    // deposit
     const wethTokenAddress = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
     // approve
     await approveErc20(wethTokenAddress, lendingPool.address, AMOUNT, deployer)
     console.log("Depositing....")
     // asset, amount, onBehalfOf, referralcode = always is zero
-    await lendingPool.deposite(wethTokenAddress, AMOUNT, deployer, 0)
+    await lendingPool.deposit(wethTokenAddress, AMOUNT, deployer, 0)
     console.log("Deposited!")
 }
 
@@ -48,7 +48,7 @@ async function approveErc20(
     account
 ) {
     // create erc20 contract
-    const erc20Token = await ehters.getContractAt(
+    const erc20Token = await ethers.getContractAt(
         "IERC20", // abit
         erc20Address, // contract address
         account // account address
