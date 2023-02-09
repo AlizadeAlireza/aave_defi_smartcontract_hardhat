@@ -25,11 +25,23 @@ async function main() {
         lendingPool,
         deployer
     )
+
+    const daiPrice = await getDaiPrice()
     // Borrow
     // how much we have borrow, how much we have in collateral, how much we can borrow!!
 }
 
-async function getDaiPrice() {}
+async function getDaiPrice() {
+    // reading don't need assigner but sending need
+    const daiEthPriceFeed = await ethers.getContractAt(
+        "AggregatorV3Interface",
+        "0x773616E4d11A78F511299002da57A0a94577F1f4"
+    )
+    // we just want answer that is the 1 index of function
+    const price = (await daiEthPriceFeed.latestRoundData())[1]
+    console.log(`The DAI/ETH price is ${price.toString()}`)
+    return price
+}
 
 async function getLendingPool(account) {
     // create the lending pool address contract
