@@ -27,11 +27,9 @@ async function main() {
     )
     // Borrow
     // how much we have borrow, how much we have in collateral, how much we can borrow!!
-   
-
-async function getDaiPrice() {
-    
 }
+
+async function getDaiPrice() {}
 
 async function getLendingPool(account) {
     // create the lending pool address contract

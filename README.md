@@ -89,3 +89,4 @@ let's say like that:
     how much of DAI can we borrow based of the velue of EHT?!?!?
 
 for this we use the priceFeeds.
+in this interface we need to lastRoundData for getting the latest price of DAI.
