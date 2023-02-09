@@ -21,13 +21,13 @@ async function main() {
     await lendingPool.deposit(wethTokenAddress, AMOUNT, deployer, 0)
     console.log("Deposited!")
 
-    // Borrow
-    // how much we have borrow, how much we have in collateral, how much we can borrow!!
     let { availableBorrowsETH, totalDebtETH } = await getBorrowUserData(
         lendingPool,
         deployer
     )
-}
+    // Borrow
+    // how much we have borrow, how much we have in collateral, how much we can borrow!!
+   
 
 async function getLendingPool(account) {
     // create the lending pool address contract

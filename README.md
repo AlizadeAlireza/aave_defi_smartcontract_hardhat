@@ -80,3 +80,12 @@ each token has some different value like:
     and etc.
 
 after that we create async function to get user data we can return that information just we need.
+
+what the convertion of DAI is?!
+
+we want to get how much we can borrow in ETH but we want to borrow DAI.
+let's say like that:
+
+    how much of DAI can we borrow based of the velue of EHT?!?!?
+
+for this we use the priceFeeds.
