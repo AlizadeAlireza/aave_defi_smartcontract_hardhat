@@ -38,6 +38,22 @@ async function main() {
     // how much we have borrow, how much we have in collateral, how much we can borrow!!
 }
 
+async function borrowDai(
+    daiAddress,
+    lendingPool,
+    amountDaiToBorrowWei,
+    account
+) {
+    const borrowTx = await lendingPool.borrow(
+        daiAddress,
+        amountDaiToBorrowWei,
+        1,
+        0
+    )
+    await borrowTx.wait(1)
+    console.log("You've borrowed!")
+}
+
 async function getDaiPrice() {
     // reading don't need assigner but sending need
     const daiEthPriceFeed = await ethers.getContractAt(
@@ -77,7 +93,7 @@ async function approveErc20(
 ) {
     // create erc20 contract
     const erc20Token = await ethers.getContractAt(
-        "IERC20", // abit
+        "IERC20", // abi
         erc20Address, // contract address
         account // account address
     )
