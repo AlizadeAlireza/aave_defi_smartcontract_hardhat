@@ -44,6 +44,17 @@ async function main() {
         deployer
     )
     await getBorrowUserData(lendingPool, deployer)
+    await repay(amountDaiToBorrowWei, daiTokenAddress, lendingPool, deployer)
+    await getBorrowUserData(lendingPool, deployer)
+}
+
+// MAIN MAIN MAIN MAIN MIAN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN
+
+async function repay(amount, daiAddress, lendingPool, account) {
+    await approveErc20(daiAddress, lendingPool.address, amount, account)
+    const repayTx = await lendingPool.rapay(daiAddress, amount, 1, account)
+    await repayTx.wait(1)
+    console.log("repaid!")
 }
 
 async function borrowDai(
@@ -95,10 +106,10 @@ async function getLendingPool(account) {
 }
 
 async function approveErc20(
-    erc20Address,
-    spenderAddress,
-    amountToSpend,
-    account
+    erc20Address, // for contract
+    spenderAddress, // for function in contract
+    amountToSpend, // for function in contract
+    account // for contract
 ) {
     // create erc20 contract
     const erc20Token = await ethers.getContractAt(
