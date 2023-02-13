@@ -36,6 +36,13 @@ async function main() {
     )
     // Borrow
     // how much we have borrow, how much we have in collateral, how much we can borrow!!
+    const daiTokenAddress = "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+    await borrowDai(
+        daiTokenAddress,
+        lendingPool,
+        amountDaiToBorrowWei,
+        deployer
+    )
 }
 
 async function borrowDai(
@@ -47,8 +54,9 @@ async function borrowDai(
     const borrowTx = await lendingPool.borrow(
         daiAddress,
         amountDaiToBorrowWei,
-        1,
-        0
+        1, // is stable
+        0,
+        account
     )
     await borrowTx.wait(1)
     console.log("You've borrowed!")
