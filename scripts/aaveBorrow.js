@@ -28,7 +28,7 @@ async function main() {
 
     const daiPrice = await getDaiPrice()
     const amountDaiToBorrow =
-        availableBorrowsETH.toString() * 0.95 * (1 / daiPrice.toNumber())
+        availableBorrowsETH.toString() * 0.95 * (1 / daiPrice.toNumber()) // we want to just borrow 95%
     console.log(`You can borrow ${amountDaiToBorrow} DAI`)
     // we need this unit for our work
     const amountDaiToBorrowWei = ethers.utils.parseEther(
@@ -43,6 +43,7 @@ async function main() {
         amountDaiToBorrowWei,
         deployer
     )
+    await getBorrowUserData(lendingPool, deployer)
 }
 
 async function borrowDai(
