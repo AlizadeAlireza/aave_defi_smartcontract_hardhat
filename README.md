@@ -102,3 +102,14 @@ in this funtion we use amount that we want to repay, dai address and lending poo
 
 when we borrow dai, we accrued interest.so we still owe dye back.
 we can use uniswap to swap our ETH to dai for repay.
+
+# Visualizing the Transactions
+
+when we deposit our collateral, we actually get back what's called an aToken or interest bearing token.
+
+this tokens keep track of how much collateral or in our case how much weth token
+we have deposited in the Aave protocol.
+
+when we want to withdraw our weth Back, we burn this atokens.
+
+it is the token that is going up because the interest of our deposited collateral.
