@@ -52,7 +52,7 @@ async function main() {
 
 async function repay(amount, daiAddress, lendingPool, account) {
     await approveErc20(daiAddress, lendingPool.address, amount, account)
-    const repayTx = await lendingPool.rapay(daiAddress, amount, 1, account)
+    const repayTx = await lendingPool.repay(daiAddress, amount, 1, account)
     await repayTx.wait(1)
     console.log("repaid!")
 }

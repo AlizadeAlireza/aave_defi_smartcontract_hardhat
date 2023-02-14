@@ -99,3 +99,6 @@ for this action we need convert it to DAI.
 # REPAY
 
 in this funtion we use amount that we want to repay, dai address and lending pool with the account.
+
+when we borrow dai, we accrued interest.so we still owe dye back.
+we can use uniswap to swap our ETH to dai for repay.
